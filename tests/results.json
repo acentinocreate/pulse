@@ -1,10 +1,10 @@
 {
   "checks": {
     "HTTP startup": true,
-    "4.8 second duration": true,
+    "10 second duration": true,
     "Replay from final frame": true,
     "Pause": true,
-    "Playback stops after 4.8 seconds": true,
+    "Playback stops after 10 seconds": true,
     "Loop restarts": true,
     "MP4 rendering": true,
     "Mobile overflow": true,
@@ -16,8 +16,8 @@
   },
   "errors": [],
   "video": {
-    "width": 1280,
-    "height": 720,
-    "duration": "4.800000"
+    "width": 1080,
+    "height": 1920,
+    "duration": "10.000000"
   }
 }

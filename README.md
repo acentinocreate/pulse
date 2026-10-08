@@ -1,15 +1,33 @@
-# Pulso — tipografia cinética
+# Pulso / Run culture
 
-Demonstração original de motion com a frase **LETRA VIRA MOVIMENTO**. Duração: **4,8 segundos**. Entrada de letras, expansão horizontal, mudança de direção, ecos tipográficos e assinatura final. Sem áudio.
+Filme vertical de tipografia cinética sobre cultura running: **10 segundos, proporção 9:16**. Cinco cenas combinam palavras em movimento e ilustrações vetoriais originais: corredores articulados, tênis, cidade e percurso animado.
 
-Abra `index.html` diretamente no navegador. Tudo está no HTML: CSS, JavaScript e animação. Não exige instalação, compilação, servidor, conexão ou dependências. Usa Arial/Helvetica ou a fonte sem serifa do sistema; nenhuma fonte é distribuída. A aparência pode variar entre sistemas.
+| Tempo | Conteúdo |
+| --- | --- |
+| 0–2,1 s | Dê o primeiro passo — corredor, linhas de velocidade e cidade. |
+| 2,1–4,2 s | Encontre seu ritmo — tênis ilustrado, órbitas e cadência. |
+| 4,2–6,2 s | Ninguém corre só — grupo de corredores e ecos tipográficos. |
+| 6,2–8 s | A rua é nossa — mapa de bairro e percurso em movimento. |
+| 8–10 s | Corra. Respire. Repita. — grupo, chamada final e assinatura Pulso. |
 
-**Reproduzir** inicia ou pausa; **Repetir** ativa o ciclo; a linha do tempo permite examinar qualquer quadro. A animação começa automaticamente, exceto quando o sistema solicita movimento reduzido: nesse caso mostra o quadro final e aguarda ação do usuário.
+## Abrir
 
-`assets/pulso-demo.mp4` contém uma renderização de 1280 × 720, 30 quadros por segundo. `assets/preview.png` mostra um quadro da animação.
+Abra `index.html` no navegador. Tudo está incorporado no arquivo: CSS, JavaScript e desenho vetorial em Canvas. Não exige instalação, compilação, servidor, conexão ou dependências. Usa a fonte sem serifa do sistema; nenhuma fonte, fotografia ou música de terceiros é distribuída. As imagens são ilustrações, não fotografias. Sem áudio.
 
-Compatibilidade pretendida: versões atuais de Chrome, Edge, Firefox e Safari com Web Animations API. Testes realmente executados estão em `tests/REPORT.md`.
+**Reproduzir** inicia ou pausa; **Repetir** ativa o ciclo; a linha do tempo permite examinar qualquer quadro. A animação começa automaticamente, exceto quando o sistema solicita movimento reduzido: mostra o quadro final e aguarda ação do usuário. A proporção vertical é preservada em telas pequenas e grandes.
 
-## Desenvolvimento
+## Arquivos
 
-Edite o próprio HTML. Para servir opcionalmente: `python -m http.server 8080`. A API `window.Pulso.seek(milissegundos)` posiciona o quadro para reprodução determinística e captura. Créditos de autoria: criação assistida por Codex para acentinocreate. Licença MIT; nenhuma imagem, música ou fonte de terceiros foi incluída.
+- `assets/pulso-running.mp4`: versão nova, H.264, 1080 × 1920, 30 fps, 10 segundos.
+- `assets/running-preview.png`: quadro de prévia.
+- `assets/scene-1.png` a `scene-5.png`: quadros de cada cena.
+- `demo-4s.html` e `assets/pulso-demo.mp4`: primeira demonstração horizontal, preservada.
+- `tests/REPORT.md`: testes executados e limitações.
+
+## Desenvolvimento e créditos
+
+Edite o HTML. Para servir opcionalmente: `python -m http.server 8080`. `window.Pulso.seek(milissegundos)` posiciona a animação determinística para captura. O desenho original de cada cena usa caminhos vetoriais, geometria, articulações e curvas; não há imagens externas carregadas durante a execução.
+
+Criação assistida por Codex para acentinocreate. Licença MIT. Chromium/Playwright/FFmpeg são ferramentas de verificação/renderização, não dependências distribuídas no aplicativo. A fonte do sistema pode produzir diferenças de aparência em outros computadores.
+
+Compatibilidade pretendida: versões atuais de Chrome, Edge, Firefox e Safari com Canvas 2D. Testes realmente executados estão no relatório. O repositório remoto não foi criado: a tentativa anterior de acesso à API do GitHub retornou Forbidden.

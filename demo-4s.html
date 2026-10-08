@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pulso — tipografia em movimento</title>
+<style>
+:root{color-scheme:dark;--paper:#f1efdf;--ink:#171b18;--acid:#d4ff47}*{box-sizing:border-box}body{margin:0;background:#171b18;color:var(--paper);font-family:Arial,Helvetica,sans-serif}main{max-width:1440px;margin:auto;padding:28px}header,footer,.controls{display:flex;justify-content:space-between;align-items:center;gap:16px}header{margin-bottom:22px}h1{font-size:19px;margin:0;letter-spacing:-.8px}header span,footer,.controls{font:11px ui-monospace,monospace;letter-spacing:1px}header span{color:#a5ab9b}.stage{aspect-ratio:16/9;position:relative;background:var(--paper);overflow:hidden;color:var(--ink);isolation:isolate}.scene{position:absolute;inset:0}.label{position:absolute;top:7%;left:5%;font-size:clamp(8px,1.1vw,15px);font-family:monospace;letter-spacing:2px}.label.right{left:auto;right:5%}.word{position:absolute;left:0;top:26%;width:100%;text-align:center;font-size:clamp(48px,15vw,220px);line-height:.94;font-weight:900;letter-spacing:-.08em;white-space:nowrap}.word span{display:inline-block;transform-origin:50% 90%}.rule{position:absolute;left:5%;right:5%;height:2px;background:currentColor;bottom:11%;transform-origin:left}.footnote{position:absolute;bottom:6%;left:5%;font:clamp(7px,1vw,14px) monospace;letter-spacing:2px}.green{background:var(--acid)}.vira{font-size:clamp(72px,22vw,320px);top:18%;letter-spacing:-.09em}.movement{font-size:clamp(26px,9.6vw,138px);top:37%;letter-spacing:-.075em}.echo{opacity:.12;top:17%;color:var(--ink)}.echo.bottom{top:57%}.bar{position:absolute;left:0;top:0;height:100%;width:100%;background:var(--ink);transform-origin:left;z-index:5}.dot{position:absolute;width:6%;aspect-ratio:1;border-radius:50%;right:7%;bottom:16%;background:var(--ink)}.pill{position:absolute;left:5%;top:9%;border:1px solid currentColor;padding:.6em 1em;border-radius:99px;font:clamp(8px,1vw,14px) monospace;letter-spacing:1px}.end .word{font-size:clamp(42px,13vw,187px);top:25%;line-height:.85;text-align:left;left:5%;width:90%}.end .word small{display:block;font-size:.29em;letter-spacing:-.04em;margin-top:.45em}.end .footnote{right:5%;left:auto}.controls{margin-top:18px;flex-wrap:wrap;letter-spacing:0}button{background:var(--acid);color:var(--ink);border:0;padding:12px 20px;border-radius:2px;font:inherit;cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid #fff;outline-offset:4px}label{display:flex;align-items:center;gap:8px}input[type=range]{accent-color:var(--acid);flex:1;min-width:130px}footer{margin-top:32px;color:#a5ab9b;line-height:1.6;letter-spacing:0}.sr{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden}@media(max-width:600px){main{padding:16px}header span{font-size:9px}.controls{gap:12px}footer{align-items:flex-start;flex-direction:column}.word{font-size:17vw}.vira{font-size:25vw}.movement{font-size:10.8vw}.end .word{font-size:14vw}}
+</style></head>
+<body><main>
+<header><h1>PULSO<span style="color:#d4ff47">●</span></h1><span>ESTUDO DE MOVIMENTO / 001</span></header>
+<div class="stage" id="stage" role="img" aria-label="Animação tipográfica: letra vira movimento. Pulso, 4,8 segundos.">
+<section class="scene" id="letra"><div class="label">FORMA / RITMO / EXPRESSÃO</div><div class="label right">01 — LETRA</div><div class="word" id="letters">LETRA</div><div class="rule" id="rule"></div><div class="footnote">UMA IDEIA COMEÇA COM UM TRAÇO.</div></section>
+<section class="scene green" id="vira"><div class="label">MUDE A DIREÇÃO.</div><div class="label right">02 — TRANSFORMAÇÃO</div><div class="word vira" id="turn">VIRA</div><div class="dot" id="dot"></div><div class="footnote">A FORMA ENCONTRA O TEMPO.</div></section>
+<section class="scene green" id="move"><div class="pill">03 / EM MOVIMENTO</div><div class="word movement echo" id="echo1">MOVIMENTO</div><div class="word movement" id="moving">MOVIMENTO</div><div class="word movement echo bottom" id="echo2">MOVIMENTO</div><div class="footnote">LETRA VIRA MOVIMENTO.</div></section>
+<section class="scene" id="end"><div class="label">TIPOGRAFIA CINÉTICA</div><div class="word" id="closing">PULSO.<small>LETRA VIRA MOVIMENTO.</small></div><div class="footnote">4,8 S / HTML + MOTION</div><div class="rule"></div></section>
+<div class="bar" id="wipe"></div>
+</div>
+<div class="controls"><button id="play">Reproduzir</button><label><input type="checkbox" id="loop"> Repetir</label><input id="timeline" type="range" min="0" max="4800" step="1" value="0" aria-label="Posição da animação"><output id="time">0,0 / 4,8 s</output></div>
+<p class="sr" id="status" role="status">Pronto para reproduzir.</p>
+<footer><span>Uma demonstração de tipografia cinética.<br>Sem instalação, fontes externas ou chamadas de rede.</span><span>Use Reproduzir ou explore a linha do tempo.</span></footer>
+</main><script>
+'use strict';
+const duration=4800, $=id=>document.getElementById(id),animations=[];
+function track(id,frames,delay,time,easing='cubic-bezier(.22,1,.36,1)'){const a=$(id).animate(frames,{duration:time,delay,fill:'both',easing});a.pause();animations.push(a)}
+function letters(id){const word=$(id),text=word.textContent;word.textContent='';return [...text].map((char,i)=>{const span=document.createElement('span');span.textContent=char;span.id=id+i;word.append(span);return span.id})}
+track('letra',[{opacity:1},{opacity:1,offset:.85},{opacity:0}],0,1550,'linear');
+letters('letters').forEach((id,i)=>track(id,[{transform:'translateY(125%) rotate(18deg) scaleX(.4)',opacity:0},{transform:'translateY(0) rotate(0) scaleX(1)',opacity:1}],80+i*85,650));
+track('letters',[{transform:'scaleX(1)'},{transform:'scaleX(1.18)',offset:.55},{transform:'translateX(-110%) scaleX(.65)'}],760,810);
+track('rule',[{transform:'scaleX(0)'},{transform:'scaleX(1)'}],260,650);
+track('vira',[{clipPath:'inset(0 0 0 100%)'},{clipPath:'inset(0 0 0 0)'}],1170,480);
+track('vira',[{opacity:1},{opacity:1,offset:.9},{opacity:0}],0,2600,'linear');
+track('turn',[{transform:'translateX(35%) skewX(-18deg) scaleX(.55)'},{transform:'translateX(0) skewX(0) scaleX(1)',offset:.65},{transform:'translateX(-4%) skewX(-6deg) scaleX(1.08)'}],1240,900);
+track('dot',[{transform:'scale(0)'},{transform:'scale(1)',offset:.5},{transform:'translateX(-850%) scale(.5)'}],1450,800);
+track('move',[{transform:'translateY(100%)'},{transform:'translateY(0)'}],2180,450);
+track('move',[{opacity:1},{opacity:1,offset:.94},{opacity:0}],0,3910,'linear');
+letters('moving').forEach((id,i)=>track(id,[{transform:'translateY(95%) rotate(12deg)',opacity:0},{transform:'translateY(0) rotate(0)',opacity:1}],2340+i*38,490));
+track('echo1',[{transform:'translateX(-60%)'},{transform:'translateX(3%)'}],2250,1100);
+track('echo2',[{transform:'translateX(65%)'},{transform:'translateX(-3%)'}],2250,1100);
+track('moving',[{transform:'scaleX(1)'},{transform:'scaleX(1.05)',offset:.6},{transform:'scaleX(.94)'}],3100,650);
+track('end',[{opacity:0},{opacity:1}],3810,220,'linear');
+track('closing',[{transform:'translateY(35%)',opacity:0},{transform:'translateY(0)',opacity:1}],3880,620);
+track('wipe',[{transform:'scaleX(0)',offset:0},{transform:'scaleX(1)',offset:.42},{transform:'scaleX(1)',offset:.55},{transform:'scaleX(0)',offset:1}],3670,430,'cubic-bezier(.65,0,.35,1)');
+let position=0,playing=false,raf=0,start=0;
+function draw(t){position=Math.max(0,Math.min(duration,t));animations.forEach(a=>a.currentTime=position);$('timeline').value=position;$('time').textContent=(position/1000).toFixed(1).replace('.',',')+' / 4,8 s'}
+function pause(){playing=false;cancelAnimationFrame(raf);$('play').textContent=position>=duration?'Reproduzir novamente':'Reproduzir'}
+function tick(now){if(!playing)return;const t=now-start;if(t>=duration){draw(duration);if($('loop').checked){start=now;draw(0)}else{pause();$('status').textContent='Animação concluída.';return}}else draw(t);raf=requestAnimationFrame(tick)}
+function play(){if(position>=duration)draw(0);playing=true;start=performance.now()-position;$('play').textContent='Pausar';$('status').textContent='Reproduzindo.';raf=requestAnimationFrame(tick)}
+$('play').onclick=()=>playing?pause():play();$('timeline').oninput=()=>{pause();draw(Number($('timeline').value))};
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&playing)pause()});
+window.Pulso={duration,seek(t){pause();draw(t)},play,pause,get position(){return position},get playing(){return playing}};
+draw(0);if(matchMedia('(prefers-reduced-motion: reduce)').matches)draw(duration);else play();
+</script></body></html>
