@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "HTTP startup": true,
+    "GET immediately before midpoint": true,
+    "KEEP at midpoint": true,
+    "Visible KEEP has four-letter width after exchange": true,
+    "Main lettering uses vector contours": true,
+    "10 second duration": true,
+    "Replay from final frame": true,
+    "Pause": true,
+    "Playback stops after 10 seconds": true,
+    "Loop restarts": true,
+    "MP4 rendering": true,
+    "Mobile overflow": true,
+    "Reduced motion static frame": true,
+    "file startup": "Not executed successfully: Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///workspace/pulso-tipografia/motions/get-keep/index.html",
+    "No page errors": true,
+    "No remote network calls": true,
+    "MP4 dimensions and duration": true
+  },
+  "errors": [],
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "duration": "10.000000"
+  }
+}

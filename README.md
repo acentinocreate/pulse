@@ -1,4 +1,20 @@
-# Pulso / Run culture
+# Pulso / Running motions
+
+## Novo: GET → KEEP RUNNING
+
+[HTML editável](motions/get-keep/index.html) · [MP4 1080 × 1920](assets/get-keep-running.mp4)
+
+Animação de impacto, 10 segundos, 9:16, baseada no asset enviado pelo usuário. Lettering verde arredondado reconstruído manualmente em contornos vetoriais. Aos 5 segundos, GET sai e KEEP entra, mantendo RUNNING. Linhas de pista, rastros, zoom em detalhes, cortes de cor e chevrons reforçam a aceleração. Sem áudio. A palavra KEEP usa desenhos compatíveis com a referência; não se afirma extração exata do asset original.
+
+`motions/get-keep/index.html` é autossuficiente e funciona sem dependências de rede. Inclui pausa, repetição, linha do tempo e respeito a movimento reduzido. Fonte da interface depende do sistema; lettering principal usa os mesmos caminhos vetoriais em qualquer computador.
+
+Fontes editáveis: `motions/get-keep/source.js` (animação), `lettering.json` (contornos) e `build.py` (gera HTML independente e prova SVG). Depois de editar JS ou JSON, execute `python motions/get-keep/build.py`. A prova SVG está em `motions/get-keep/lettering-proof.svg`. A referência visual fornecida pelo usuário mantém os direitos de seu titular; a licença MIT do código não altera esses direitos.
+
+[Relatório de teste do novo motion](tests/GET_KEEP_REPORT.md).
+
+<img src="assets/get-keep-preview.png" width="280" alt="KEEP RUNNING: lettering arredondado branco sobre verde, com linhas de velocidade">
+
+## Run culture / versão anterior
 
 Filme vertical de tipografia cinética sobre cultura running: **10 segundos, proporção 9:16**. Cinco cenas combinam palavras em movimento e ilustrações vetoriais originais: corredores articulados, tênis, cidade e percurso animado.
 
