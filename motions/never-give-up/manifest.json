@@ -1,0 +1,43 @@
+{
+  "duration_seconds": 10,
+  "transition_seconds": 5,
+  "canvas": [
+    1920,
+    1080
+  ],
+  "assets": [
+    {
+      "file": "vector-1.svg",
+      "sha256": "9d8ef525dbfad8cec7d6043487217f2d36ee69536d5f31dd8951b2d875f810c7",
+      "path_count": 12,
+      "viewbox": [
+        0.0,
+        0.0,
+        1334.68,
+        165.87
+      ],
+      "placement": [
+        292.65999999999997,
+        457.065
+      ],
+      "fill": "#30d949"
+    },
+    {
+      "file": "vector-2.svg",
+      "sha256": "9b1110d743465fb429bb6cd13f2f59f457f072aeb829c5bdcd00e8f0d7f70b06",
+      "path_count": 13,
+      "viewbox": [
+        0.0,
+        0.0,
+        1758.1,
+        128.5
+      ],
+      "placement": [
+        80.95000000000005,
+        475.75
+      ],
+      "fill": "#e5e1cf"
+    }
+  ],
+  "all_original_paths_unchanged": true
+}

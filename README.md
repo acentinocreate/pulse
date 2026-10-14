@@ -1,6 +1,16 @@
 # Pulso / Running motions
 
-## Atual: logo original GET → KEEP, transparente
+## Atual: Never give up. → Nunca desista.
+
+[HTML editável](motions/never-give-up/index.html) · [WebM transparente 1920 × 1080](assets/never-give-up-transparent.webm) · [WebM transparente 9:16](assets/never-give-up-transparent-9x16.webm) · [Pacote pronto para abrir](assets/never-give-up-package.zip)
+
+Motion de 10 segundos com transição entre **Asset 5.svg** e **Asset 6.svg**. Os dois arquivos fornecidos já contêm contornos; não há substituição de fontes ou redesenho. 12 contornos de "Never give up." em #30d949 passam para 13 contornos de "Nunca desista." em #e5e1cf. Entradas em sequência por letra, impulsos de cadência, mudanças rápidas de inclinação, deslocamentos e zoom reforçam a estética esportiva. A troca ocorre na região dos 5 segundos, com repouso final para leitura.
+
+Somente os elementos fornecidos são animados. Sem fundo, ilustrações adicionais, grafismos, marcas-d'água ou áudio. O quadriculado do visualizador não é exportado. As posições relativas e a escala natural de cada desenho são mantidas nos quadros de repouso; ambos foram comparados em RGBA ao respectivo original no mesmo enquadramento. Cópias estáticas dos mesmos contornos evitam diferenças de antialiasing causadas por grupos animados e garantem esses quadros exatos; apenas uma representação de cada vetor fica visível por vez.
+
+SVG animado em [motions/never-give-up/motion.svg](motions/never-give-up/motion.svg). Fontes em `vector-1.svg`, `vector-2.svg` e `build.py`; os SVGs originais permanecem intactos. Gere o HTML e SVG com `python motions/never-give-up/build.py` (FontTools necessário apenas para esse passo de desenvolvimento). O HTML inclui tudo o que precisa para reprodução local, sem fontes externas ou chamadas de rede. [Relatório de validação](tests/PHRASE_MOTION_REPORT.md).
+
+## Logo original GET → KEEP, transparente
 
 [Visualizador HTML](motions/logo-get-keep/index.html) · [WebM transparente horizontal](assets/get-keep-logo-transparent.webm) · [WebM transparente 9:16](assets/get-keep-logo-transparent-9x16.webm) · [SVG animado](motions/logo-get-keep/logo-animated.svg) · [Pacote pronto para abrir](assets/get-keep-logo-package.zip)
 
