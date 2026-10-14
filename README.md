@@ -1,6 +1,18 @@
 # Pulso / Running motions
 
-## Novo: GET → KEEP RUNNING
+## Atual: logo original GET → KEEP, transparente
+
+[Visualizador HTML](motions/logo-get-keep/index.html) · [WebM transparente horizontal](assets/get-keep-logo-transparent.webm) · [WebM transparente 9:16](assets/get-keep-logo-transparent-9x16.webm) · [SVG animado](motions/logo-get-keep/logo-animated.svg) · [Pacote pronto para abrir](assets/get-keep-logo-package.zip)
+
+Animação direta da logo fornecida em SVG, sem fundo, imagens, faixas, textos adicionais ou marca-d'água na animação. 10 segundos, 30 fps; GET sai e KEEP entra na região dos 5 segundos. Entradas e impulsos de ritmo usam somente os contornos da logo. Todos os 15 contornos originais e suas cores foram preservados. O quadro de repouso de GET foi comparado ao SVG original em todos os canais RGBA, pixel por pixel, sem diferença.
+
+O arquivo recebido inclui letras verdes e brancas, inclusive GET e duas construções brancas de N. Elas são mantidas. KEEP não estava no arquivo e foi desenhado separadamente com altura, espessura e arredondamento compatíveis com GET; não se afirma que KEEP foi fornecido pelo usuário. O fundo quadriculado/escuro/claro existe apenas no visualizador para inspecionar a transparência; não é exportado. O RUNNING permanece na mesma posição durante a troca de palavra.
+
+Formato horizontal: 1518 × 1010. Formato vertical: 1080 × 1920 com a mesma logo proporcionalmente centralizada e margens transparentes. WebM VP9 inclui alpha real, verificado após decodificação com libvpx. MP4 convencional não é oferecido nesta versão, pois não mantém a transparência. Compatibilidade de WebM com alpha varia conforme navegador/editor; SVG e HTML permitem inspeção vetorial independente do vídeo.
+
+Fontes em `motions/logo-get-keep/`: original.svg intacto, keep.svg editável, build.py, logo-animated.svg, keep-running.svg e index.html autossuficiente. Execute `python motions/logo-get-keep/build.py` após editar os contornos ou o roteiro de animação. [Relatório](tests/LOGO_MOTION_REPORT.md).
+
+## GET → KEEP / estudo anterior de composição
 
 [HTML editável](motions/get-keep/index.html) · [MP4 1080 × 1920](assets/get-keep-running.mp4)
 

@@ -1,0 +1,41 @@
+{
+  "exports_reused": true,
+  "checks": {
+    "HTTP startup": true,
+    "Every original path retained verbatim": true,
+    "Original green and white fills preserved": true,
+    "Resting GET logo matches supplied SVG pixel for pixel": true,
+    "Transparent background and visible logo": true,
+    "GET visible before midpoint": true,
+    "KEEP replaces GET after midpoint": true,
+    "RUNNING placement preserved through word exchange": true,
+    "Duration ten seconds": true,
+    "Final still has alpha": true,
+    "Transparent WebM rendering": true,
+    "Mobile no horizontal overflow": true,
+    "Replay": true,
+    "Pause": true,
+    "Playback completion": true,
+    "Repeat": true,
+    "Reduced motion pauses on final logo": true,
+    "Standalone animated SVG loads": true,
+    "Standalone SVG finishes with KEEP": true,
+    "No JavaScript errors": true,
+    "No ordinary remote requests": true,
+    "WebM dimensions and duration": true,
+    "WebM alpha signaling": true,
+    "Decoded WebM has real transparent pixels": true,
+    "Portrait transparent render": true,
+    "Portrait 9:16 dimensions and duration": true,
+    "Portrait padding really transparent": true
+  },
+  "file_startup": "Blocked: Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///workspace/pulso-tipografia/motions/logo-get-keep/index.html",
+  "errors": [],
+  "video": {
+    "width": 1518,
+    "height": 1010,
+    "duration": "10.000000",
+    "codec": "vp9",
+    "alpha": "1"
+  }
+}

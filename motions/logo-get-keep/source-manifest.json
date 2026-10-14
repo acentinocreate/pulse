@@ -1,0 +1,13 @@
+{
+  "original_sha256": "1f5678d24a331f66af95bb2fb9a4a880a18ef8b78da98e72492dade1383fef2a",
+  "original_path_count": 15,
+  "original_colors": {
+    "cls-1": "#30d949",
+    "cls-2": "#fff"
+  },
+  "new_word": "KEEP",
+  "duration_seconds": 10,
+  "swap_seconds": 5,
+  "reference_viewbox": "0 0 758.5 504.83",
+  "original_contours_preserved": true
+}
