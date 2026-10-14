@@ -12,4 +12,4 @@ Não executados: Firefox, Safari, Edge, testes em dispositivos físicos. file://
 
 Reprodução: com Playwright Python, Chromium em /usr/bin/chromium e FFmpeg/ffprobe no PATH, execute python tests/render.py. O script inicia e encerra seu próprio servidor na porta loopback 8092 e gera o vídeo e quadros. Os registros da versão horizontal anterior estão preservados em REPORT-4s.md e results-4s.json; não foram reexecutados nesta atualização.
 
-Publicação: repositório local independente versionado. A criação do repositório GitHub continua pendente; a tentativa anterior foi bloqueada por Forbidden na API. Não se afirma publicação remota.
+Publicação: repositório independente versionado. A criação inicial pela API foi bloqueada por Forbidden; posteriormente o usuário criou acentinocreate/pulse pela interface do GitHub. O envio utiliza Git HTTPS. Os resultados de teste acima correspondem à execução original; não foram reexecutados para esta atualização de documentação.

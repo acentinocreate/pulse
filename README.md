@@ -30,4 +30,4 @@ Edite o HTML. Para servir opcionalmente: `python -m http.server 8080`. `window.P
 
 Criação assistida por Codex para acentinocreate. Licença MIT. Chromium/Playwright/FFmpeg são ferramentas de verificação/renderização, não dependências distribuídas no aplicativo. A fonte do sistema pode produzir diferenças de aparência em outros computadores.
 
-Compatibilidade pretendida: versões atuais de Chrome, Edge, Firefox e Safari com Canvas 2D. Testes realmente executados estão no relatório. O repositório remoto não foi criado: a tentativa anterior de acesso à API do GitHub retornou Forbidden.
+Compatibilidade pretendida: versões atuais de Chrome, Edge, Firefox e Safari com Canvas 2D. Testes realmente executados estão no relatório. Repositório: https://github.com/acentinocreate/pulse. O usuário criou o repositório pela interface do GitHub; a publicação usa a conexão Git existente, sem depender da API de criação.
